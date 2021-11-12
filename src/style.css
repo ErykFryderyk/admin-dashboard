@@ -346,11 +346,10 @@ body{
         width: 100%;
         left: 0px;
     }
-    .topbar input,
-    .topbar i{
-        margin: 0px 50px 0 50px;
+    .topbar{
+        /* position: relative; */
+        z-index: 999;
     }
-    
     .card-box{
         grid-template-columns: 1fr;
     }
@@ -362,9 +361,13 @@ body{
         left: -60px;
     }
     .toggle{
-        color: white;
         z-index: 10000;
-        position: fixed;
+    }
+    .toggle::before {
+        color: #fff;
+    }
+    .toggle.active::before{
+        color: black;
     }
 
 }
